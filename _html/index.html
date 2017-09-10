@@ -1,3 +1,11 @@
+<!-- os 3 scripts php devem ser removidos daqui e colocados em arquivos apropriados na pasta php, para teste renomear a index com .php -->
+<script type="text/php" src="">
+  <?php
+    $msg = 0;
+    @$msg = $_POST['msg'];
+  ?>
+</script>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     
@@ -102,6 +110,11 @@
 
 <!-- Container (Contato) -->
 <div id="contato" class="container-fluid bg-grey" align="center">
+  <script type="text/php" src="">
+    <?php if($mgs==enviado): ?>
+        <h1>Mensagem enviada, agradecemos seu contato!</h1>
+    <?php else: ?>
+  </script>
   <fieldset>
     <legend><h2 class="text-center">Contato</h2></legend>
     <form action="../_php/form_contato.php" method="post">
@@ -112,10 +125,13 @@
       <label for="email"> E-mail: </label></br>
       <input id="email" type="email" name="email" required/></br>
       <label for="assunto"> Mensagem </label></br>
-      <textarea name="assunto" id="assunto"></</textarea></br>
+      <textarea name="assunto" id="assunto"></textarea></br>
       <input type="submit"/>
     </form>
   </fieldset>
+  <script type="text/php" src="">
+    <?php endif; ?>
+  </script>
   <!--
   <h2 class="text-center">CONTATO</h2>
   <div class="row">
