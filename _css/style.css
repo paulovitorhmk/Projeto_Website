@@ -17,6 +17,19 @@ body {
       font-weight: 400;
       margin-bottom: 30px;
   }  
+  .btn-sbm{
+    margin-top: 1%;
+    border:1px solid #f4511e;
+    color:#f4511e;
+    background-color: transparent;
+    width: 7% !important;
+  }
+  .btn-sbm:hover{
+    background-color: #f4511e;
+    color: #fff;
+    width: 7% !important;
+  }
+  
   .jumbotron {
       background-color: #f4511e;
       color: #fff;
@@ -104,6 +117,9 @@ body {
       margin: 15px 0;
       background-color: #f4511e;
       color: #fff;
+  }
+  .form input, .form textarea{
+    width: 30%;
   }
   .navbar {
       margin-bottom: 0;
