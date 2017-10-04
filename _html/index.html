@@ -45,7 +45,7 @@
   </div>
 </nav>
 
-<div class="jumbotron text-center">
+<div class="jumbotron text-center" id="topo">
   <h1>Olá, </h1> 
   <p>Procurando lugares para comer sem glúten, leite ou açúcar em Santos e região?</p> 
   <form>
@@ -73,7 +73,7 @@
   </div>
 </div>
 
-<div class="container-fluid bg-grey">
+<div class="container-fluid bg-gray">
   <div class="row">
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-globe logo slideanim"></span>
@@ -117,16 +117,16 @@
   </script>
   <fieldset>
     <legend><h2 class="text-center">Contato</h2></legend>
-    <form action="../_php/form_contato.php" method="post">
+    <form action="https://formspree.io/leoabreu14@gmail.com" method="POST" class="form">
       <label for="nome"> Nome: </label></br>
       <input id="nome" type="text" name="nome" required/></br>
-      <label for="telefone"> Telefone: </label></br>
-      <input id="telefone" name="telefone" type="tel"/></br>
       <label for="email"> E-mail: </label></br>
       <input id="email" type="email" name="email" required/></br>
-      <label for="assunto"> Mensagem </label></br>
-      <textarea name="assunto" id="assunto"></textarea></br>
-      <input type="submit"/>
+      <label for="assunto"> Assunto: </label></br>
+      <input id="assunto" name="assunto" type="text"/></br>
+      <label for="mensagem"> Mensagem </label></br>
+      <textarea name="mensagem" id="mensagem"></textarea></br>
+      <input type="submit" class="btn-sbm" name="submit" />
     </form>
   </fieldset>
   <script type="text/php" src="">
@@ -182,7 +182,7 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Nome Site <br/><a href="https://www.endereco.com" title="Topo">Ir para o topo</a></p>
+  <p>Nome Site <br/><a href="#topo" title="Topo">Ir para o topo</a></p>
 </footer>
 <!-- estudar para implementação
 <script>
