@@ -24,7 +24,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
     <!-- (Optional) Latest compiled and minified JavaScript translation files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
-
+    
+      <!-- All the files that are required -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link href="../_css/cadastro.css" rel="stylesheet" type="text/css">
+<script href="../_js/cadastro.js"></script>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -96,31 +103,90 @@
 <!-- Container (Onde Comer) -->
 <div id="comer" class="container-fluid text-center">
   <h2>Onde Comer</h2>
-  <h4>Encontre um local para sua próxima refeiçao</h4>
-  <br>
-<h3>Tipo de Restrição</h3>
-<select class="selectpicker" multiple data-max-options="6">
+  <h4>Selecione o um tipo de busca:</h4>
+<div class="container">
+<div class="col-xs-offset-0 col-sm-6 col-sm-offset-3">
+<div>
+  <select class="selectpicker" title="Restrições" multiple>
   <option>Açúcar</option>
   <option>Sal</option>
   <option>Glúten</option>
   <option>Lactose</option>
-  <option>Caseína</option>
+  <option>Proteínas do Leite</option>
   <option>Outros</option>
 </select>
-<h3>Tipo de Estabelecimento</h3>
-<select class="selectpicker" multiple>
-  <optgroup label="Condiments" data-max-options="2">
-    <option>Mustard</option>
-    <option>Ketchup</option>
-    <option>Relish</option>
-  </optgroup>
-  <optgroup label="Breads" data-max-options="2">
-    <option>Plain</option>
-    <option>Steamed</option>
-    <option>Toasted</option>
-  </optgroup>
+<select class="selectpicker" title="Estabelecimentos" multiple>
+  <!--optgroup label="Condiments" data-max-options="2"-->
+    <option>Restaurante</option>
+    <option>Pizzaria</option>
+    <option>Churrascaria</option>
+  <!--/optgroup-->
+  <!--optgroup label="Breads" data-max-options="2"-->
+    <option>Lanchonete</option>
+    <option>Pastelaria</option>
+    <option>Bar</option>
+    <option>Sorveteria</option>
+    <option>Mercado</option>
+    <option>Doceria</option>
+  <!--/optgroup-->
 </select>
+<input class="btn" type="submit" value="Buscar"/>
+</div><!-- .btn-group -->
 </div>
+</div>
+</div>
+
+
+<div id="resultado" class="container">
+  <div class="col-sm-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <img class="img-responsive" src="http://fakeimg.pl/250x100/">
+      </div>
+      <div class="panel-body">Pastelaria do Joao o Melhor Pastel sem Gluten</div>
+      <div class="panel-footer">Av.: Ana Costa, nº775</div>
+    </div>
+  </div>
+  
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading"><img src="http://fakeimg.pl/250x100/" alt="" class="img-responsive"></div>
+      <div class="panel-body">Testo</div>
+      <div class="panel-footer">asd</div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading"><img src="http://fakeimg.pl/250x100/" alt="" class="img-responsive"></div>
+      <div class="panel-body">Testo</div>
+      <div class="panel-footer">asd</div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading"><img src="http://fakeimg.pl/250x100/" alt="" class="img-responsive"></div>
+      <div class="panel-body">Testo</div>
+      <div class="panel-footer">asd</div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading"><img src="http://fakeimg.pl/250x100/" alt="" class="img-responsive"></div>
+      <div class="panel-body">Testo</div>
+      <div class="panel-footer">asd</div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading"><img src="http://fakeimg.pl/250x100/" alt="" class="img-responsive"></div>
+      <div class="panel-body">Testo</div>
+      <div class="panel-footer">asd</div>
+    </div>
+  </div>
+  
+  
+</div>
+
 
 <!-- Container (Informações) -->
 <div id="infos" class="container-fluid text-center bg-grey">
@@ -132,8 +198,121 @@
 <div id="cadastro" class="container-fluid">
   <div class="text-center">
     <h2>Cadastrar Minha Loja</h2>
-    <h4>Seja encontrado!</h4>
   </div>
+<!-- Where all the magic happens -->
+<!-- LOGIN FORM -->
+<div class="text-center" style="padding:50px 0">
+	<div class="logo">login</div>
+	<!-- Main Form -->
+	<div class="login-form-1">
+		<form id="login-form" class="text-left">
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="lg_username" class="sr-only">Username</label>
+						<input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+					</div>
+					<div class="form-group">
+						<label for="lg_password" class="sr-only">Password</label>
+						<input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+					</div>
+					<div class="form-group login-group-checkbox">
+						<input type="checkbox" id="lg_remember" name="lg_remember">
+						<label for="lg_remember">remember</label>
+					</div>
+				</div>
+				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+			</div>
+			<div class="etc-login-form">
+				<p>forgot your password? <a href="#">click here</a></p>
+				<p>new user? <a href="#">create new account</a></p>
+			</div>
+		</form>
+	</div>
+	<!-- end:Main Form -->
+</div>
+
+<!-- REGISTRATION FORM
+<div class="text-center" style="padding:50px 0">
+	<div class="logo">register</div>
+	<!-- Main Form
+	<div class="login-form-1">
+		<form id="register-form" class="text-left">
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="reg_username" class="sr-only">Email address</label>
+						<input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="username">
+					</div>
+					<div class="form-group">
+						<label for="reg_password" class="sr-only">Password</label>
+						<input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password">
+					</div>
+					<div class="form-group">
+						<label for="reg_password_confirm" class="sr-only">Password Confirm</label>
+						<input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirm password">
+					</div>
+					
+					<div class="form-group">
+						<label for="reg_email" class="sr-only">Email</label>
+						<input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
+					</div>
+					<div class="form-group">
+						<label for="reg_fullname" class="sr-only">Full Name</label>
+						<input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="full name">
+					</div>
+					
+					<div class="form-group login-group-checkbox">
+						<input type="radio" class="" name="reg_gender" id="male" placeholder="username">
+						<label for="male">male</label>
+						
+						<input type="radio" class="" name="reg_gender" id="female" placeholder="username">
+						<label for="female">female</label>
+					</div>
+					
+					<div class="form-group login-group-checkbox">
+						<input type="checkbox" class="" id="reg_agree" name="reg_agree">
+						<label for="reg_agree">i agree with <a href="#">terms</a></label>
+					</div>
+				</div>
+				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+			</div>
+			<div class="etc-login-form">
+				<p>already have an account? <a href="#">login here</a></p>
+			</div>
+		</form>
+	</divn Form -->
+</div>
+
+<!-- FORGOT PASSWORD FORM
+<div class="text-center" style="padding:50px 0">
+	<div class="logo">forgot password</div>
+	<!-- Main Form 
+	<div class="login-form-1">
+		<form id="forgot-password-form" class="text-left">
+			<div class="etc-login-form">
+				<p>When you fill in your registered email address, you will be sent instructions on how to reset your password.</p>
+			</div>
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="fp_email" class="sr-only">Email address</label>
+						<input type="text" class="form-control" id="fp_email" name="fp_email" placeholder="email address">
+					</div>
+				</div>
+				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+			</div>
+			<div class="etc-login-form">
+				<p>already have an account? <a href="#">login here</a></p>
+				<p>new user? <a href="#">create new account</a></p>
+			</div>
+		</form>
+	</div>
+	<!-- end:Main Form -->
+</div>
 </div>
 
 <!-- Container (Contato) -->
