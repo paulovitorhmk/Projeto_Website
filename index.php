@@ -18,6 +18,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="../_css/style.css" rel="stylesheet" type="text/css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
+
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -91,6 +98,28 @@
   <h2>Onde Comer</h2>
   <h4>Encontre um local para sua próxima refeiçao</h4>
   <br>
+<h3>Tipo de Restrição</h3>
+<select class="selectpicker" multiple data-max-options="6">
+  <option>Açúcar</option>
+  <option>Sal</option>
+  <option>Glúten</option>
+  <option>Lactose</option>
+  <option>Caseína</option>
+  <option>Outros</option>
+</select>
+<h3>Tipo de Estabelecimento</h3>
+<select class="selectpicker" multiple>
+  <optgroup label="Condiments" data-max-options="2">
+    <option>Mustard</option>
+    <option>Ketchup</option>
+    <option>Relish</option>
+  </optgroup>
+  <optgroup label="Breads" data-max-options="2">
+    <option>Plain</option>
+    <option>Steamed</option>
+    <option>Toasted</option>
+  </optgroup>
+</select>
 </div>
 
 <!-- Container (Informações) -->
