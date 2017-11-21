@@ -1,6 +1,7 @@
 <!-- os 3 scripts php devem ser removidos daqui e colocados em arquivos apropriados na pasta php, para teste renomear a index com .php -->
 <script type="text/php" src="">
   <?php
+    include ("siteci/_css/style.css");
     $msg = 0;
     @$msg = $_POST['msg'];
   ?>
