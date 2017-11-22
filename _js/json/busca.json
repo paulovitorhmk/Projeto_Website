@@ -1,0 +1,54 @@
+{
+	"restricoes": {
+		"Açúcar": [
+		    {
+    			"nome": "Lanchonete da Flor",
+    			"telefone": "13 987654321",
+    			"endereco": "Av: Padre Manoel da Silva, n 222",
+    			"conteudo": "O pastel de cenoura ralada",
+    			"foto": "https://fakeimg.pl/350x200/"
+		    }, {
+    			"nome": "Mercadinho do Zé",
+    			"telefone": "13 33445512",
+    			"endereco": "R: Das Abelhas, n 35",
+    			"conteudo": "Pães sem Acuçar",
+    			"foto": "https://fakeimg.pl/350x200/"
+		    }
+		],
+		"Sal": [
+		    {
+    			"nome": "Bar do Almeida",
+    			"telefone": "13 987654321",
+    			"endereco": "Av: Padre Manoel da Silva, n 222",
+    			"conteudo": "O pastel de cenoura ralada",
+    			"foto": "https://fakeimg.pl/350x200/"
+		    }, {
+    			"nome": "Galo Quente",
+    			"telefone": "13 33445512",
+    			"endereco": "R: Das Abelhas, n 35",
+    			"conteudo": "Pães sem Acuçar",
+    			"foto": "https://fakeimg.pl/350x200/"
+		    }
+		]
+	},
+
+	"estabelecimentos": {
+		"Restaurante": [
+		    {
+    			"nome": "Restaurante da Esmeralda",
+    			"telefone": "13 987654321",
+    			"endereco": "Av: Padre Manoel da Silva, n 222",
+    			"conteudo": "O pastel de cenoura ralada",
+    			"foto": "https://fakeimg.pl/350x200/"
+		    }, {
+    			"nome": "Restaurante & Padaria",
+    			"telefone": "13 33445512",
+    			"endereco": "R: Das Abelhas, n 35",
+    			"conteudo": "Pães sem Acuçar",
+    			"foto": "https://fakeimg.pl/350x200/"
+		    }
+		]
+	}
+}
+
+
